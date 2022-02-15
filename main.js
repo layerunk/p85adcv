@@ -1,23 +1,23 @@
-can = document.getElementById("myCanvas").innerHTML;
+can = document.getElementById("myCanvas");
 ctx = can.getContext("2d");
 
-var hei = 20;
-var wid = 25;
+var hei = 175;
+var wid = 125;
 
-var background_image = "parkingLot.jpg";
-var greencar_image = "car2.png";
+var back = "parkingLot.jpg";
+var greenc = "car2.png";
 
-var xcoord = 10;
-var ycoord = 15; 
+var xcoord = 300;
+var ycoord = 500; 
 
 function load() {
     bgtag = new Image();
     bgtag.onload = uploadbg;
-    bgtag.src = background_image;
+    bgtag.src = back;
 
     crtag = new Image();
     crtag.onload = uploadcr;
-    crtag.src = greencar_image;
+    crtag.src = greenc;
 }
 
 function uploadbg() {
@@ -34,25 +34,25 @@ function my_keydown(e)
 {
 	keyPressed = e.keyCode;
 	console.log(keyPressed);
-		if(keyPressed == '38')
+		if(keyPressed == "38")
 		{
 			up();
 			console.log("up");
 		}
 	
-		if(keyPressed == '40')
+		if(keyPressed == "40")
 		{
 			down();
 			console.log("down");
 		}
 		
-		if(keyPressed == '37')
+		if(keyPressed == "37")
 		{
 			left();
 			console.log("left");
 		}
 	
-		if(keyPressed == '39')
+		if(keyPressed == "39")
 		{
 			right();
 			console.log("right");
